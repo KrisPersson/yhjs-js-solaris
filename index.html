@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>KP Solaris</title>
 </head>
 <body>
-    
     <section class="solar-system">
         <header>
             <h1>SOLSYSTEMET</h1>
@@ -31,6 +30,45 @@
             <article id="neptune" class="planet planet--medium planet--neptune"></article>
         </section>
     </section>
-    <script src="js/index.js"></script>
+
+
+    <section class="overlay-page overlay-page--hidden">
+        <article class="sun planet--earth earth--info"></article>
+        <canvas class="overlay-page__star-canvas">
+            
+        </canvas>
+
+        <section class="overlay-page__info-section">
+            <h1>JORDEN</h1>
+            <h2>TELLUS</h2>
+            <p class="info-section__p">
+                Jorden är den största och mest kompakta av de inre planeterna. Jorden är den enda av planeterna som konstaterats ha geologisk aktivitet och är även den enda planeten som med säkerhet härbärgerar liv. Dess flytande hydrosfär är unik bland stenplaneterna och jorden är också den enda planeten hos vilken plattektonik har observerats. Jordens atmosfär skiljer sig markant från de andra planeternas, vilket förklaras av att närvaron av levande organismer har förändrat atmosfären till att innehålla fritt syre, i dag motsvarande 21 procent.
+            </p>
+            <hr>
+            <section class="info-section__grid">
+                <article>
+                    <h3>OMKRETS</h3>
+                    <p class="info-section__circumference">40 075 km</p>
+                </article>
+                <article>
+                    <h3>KM FRÅN SOLEN</h3>
+                    <p class="info-section__distance">149 600 000 km</p>
+                </article>
+                <article>
+                    <h3>MAX TEMPERATUR</h3>
+                    <p class="info-section__max-temp">60C</p>
+                </article>
+                <article>
+                    <h3>MIN TEMPERATUR</h3>
+                    <p class="info-section__min-temp">-50C</p>
+                </article>
+            </section>
+            <hr>
+            <article>
+                <h3>MÅNAR</h3>
+                <p class="info-section__moons">Månen</p>
+            </article>
+        </section>
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>

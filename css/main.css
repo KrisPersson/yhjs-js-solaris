@@ -1,5 +1,3 @@
-
-
 * {
     box-sizing: border-box;
 }
@@ -10,7 +8,6 @@ body {
     max-width: 100%;
     overflow: hidden;
     background-color: black;
-
     margin: 0;
 }
 
@@ -21,7 +18,7 @@ header {
     right: 4rem;
 }
 
-header > h1 {
+h1 {
     color: #fff;
     font-size: 3.75rem;
     margin: 0;
@@ -31,7 +28,7 @@ header > h1 {
     font-family: "Secular One", serif;
 }
 
-header > h2 {
+h2 {
     color: #FFD029;
     font-size: 1.5rem;
     margin: 0;
@@ -56,7 +53,12 @@ header > h2 {
     border-radius: 50%;
     background: #FFD029;
     position: absolute;
-    left: -1220px;
+    left: -1200px;
+}
+
+#sun:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .planet-container {
@@ -69,6 +71,11 @@ header > h2 {
 
 .planet {
     border-radius: 50%;
+}
+
+.planet:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .planet--tiny {
@@ -93,6 +100,12 @@ header > h2 {
     background: #428ED4;
 }
 
+.earth--info {
+    box-shadow:
+    0 0 0 7rem rgb(66 142 212 / 0.06),
+    0 0 0 3.5rem rgb(66 142 212 / 0.1);
+}
+
 .planet--venus {
     background: #E7CDCD;
 }
@@ -109,7 +122,6 @@ header > h2 {
 
 .planet--neptune {
     background: #7A91A7;
-
 }
 
 .planet--big {
@@ -128,10 +140,10 @@ header > h2 {
 
 .planet--saturn::after {
     content: "";
-    min-width: 155%;
+    min-width: 14rem;
     height: 0.34375rem;
     border-radius: 50%;
-    background-color: rgb(255 255 255 / 0.4);
+    background-color: rgb(255 255 255 / 0.8);
 }
 
 .planet--huge {
@@ -142,4 +154,104 @@ header > h2 {
 .planet--jupiter {
     background: #E29468;
 
+}
+
+
+/*OVERLAY PAGE*/
+
+.overlay-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(15 24 76), rgb(25 11 33));
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    /* visibility: hidden; */
+}
+
+.overlay-page--hidden {
+    left: 200%;
+}
+
+.overlay-page__star-canvas {
+    width: 70.875rem;
+    min-height: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    opacity: 0.4;
+
+
+    /* background: red; */
+}
+
+.overlay-page__info-section {
+    /* border: 2px solid yellow;  */
+    width: 40rem;
+    min-height: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+}
+
+.overlay-page__info-section h1, .overlay-page__info-section h2 {
+    text-align: left;
+}
+
+.info-section__p {
+    color: #fff;
+    font-family: 'Roboto condensed', sans-serif;
+    line-height: 1.9125rem;
+    font-size: 1.125rem;
+    letter-spacing: 0 !important;
+}
+
+.info-section__grid {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(2, 5.75rem);
+    grid-template-columns: repeat(2, 20rem);
+}
+
+.info-section__grid article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.info-section__grid p, .info-section__grid h3 {
+    font-size: 1.125rem;
+    color: #fff;
+    margin: 0;
+}
+
+.overlay-page__info-section h3 {
+    font-family: "Secular One";
+    letter-spacing: 0.1rem;
+    color: #fff;
+} 
+
+.overlay-page__info-section p  {
+    font-family: 'Roboto condensed', sans-serif;
+    letter-spacing: 0.18rem;
+    color: #fff;
+    /* margin: 0; */
+}
+
+.info-section__moons {
+    margin: 0 !important;
+}
+
+
+.overlay-page__info-section hr {
+    width: 100%;
+    border: 0.5px solid rgb(255 255 255 / 0.2)
 }
