@@ -1,0 +1,145 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: black;
+
+    margin: 0;
+}
+
+header {
+    position: absolute;
+    /* margin: 0; */
+    top: 4rem;
+    right: 4rem;
+}
+
+header > h1 {
+    color: #fff;
+    font-size: 3.75rem;
+    margin: 0;
+    letter-spacing: 1rem;
+    text-align: right;
+    vertical-align: top;
+    font-family: "Secular One", serif;
+}
+
+header > h2 {
+    color: #FFD029;
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 1rem;
+    text-align: right;
+    vertical-align: top;
+    font-family: Lora, serif;
+}
+
+.solar-system {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(15 24 76), rgb(25 11 33));
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.sun {
+    width: 79.875rem;
+    height: 79.875rem;
+    border-radius: 50%;
+    background: #FFD029;
+    position: absolute;
+    left: -1220px;
+}
+
+.planet-container {
+    width: 100%;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.planet {
+    border-radius: 50%;
+}
+
+.planet--tiny {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.planet--mercury {
+    background: #888888;
+}
+
+.planet--mars {
+    background: #EF5F5F;
+}
+
+.planet--small {
+    width: 1.625rem;
+    height: 1.625rem;
+}
+
+.planet--earth {
+    background: #428ED4;
+}
+
+.planet--venus {
+    background: #E7CDCD;
+}
+
+.planet--medium {
+    width: 4.125rem;
+    height: 4.125rem;
+}
+
+.planet--uranus {
+    background: #C9D4F1;
+
+}
+
+.planet--neptune {
+    background: #7A91A7;
+
+}
+
+.planet--big {
+    width: 9rem;
+    height: 9rem;
+}
+
+.planet--saturn {
+    background: #C7AA72;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(330deg);
+}
+
+.planet--saturn::after {
+    content: "";
+    min-width: 155%;
+    height: 0.34375rem;
+    border-radius: 50%;
+    background-color: rgb(255 255 255 / 0.4);
+}
+
+.planet--huge {
+    width: 11.75rem;
+    height: 11.75rem;
+}
+
+.planet--jupiter {
+    background: #E29468;
+
+}
