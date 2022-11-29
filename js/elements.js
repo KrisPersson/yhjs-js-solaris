@@ -1,3 +1,6 @@
+// Alla konstanter/element, uppdelade i objekt baserat på vy för att hålla index.js ren och lättare hitta allt som refererar till DOMen. 
+// Arrayen är för att ge varje planet-element en numrerad position.
+
 const overlayPageEl = {
     overlayPage: document.querySelector('.overlay-page'),
     info: document.querySelector('.info-section__p'),

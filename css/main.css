@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     width: 100vw;
     height: 100vh;
@@ -10,13 +9,11 @@ body {
     background-color: black;
     margin: 0;
 }
-
 header {
     position: absolute;
     top: 4rem;
     right: 4rem;
 }
-
 h1 {
     color: #fff;
     font-size: 3.75rem;
@@ -26,7 +23,6 @@ h1 {
     vertical-align: top;
     font-family: "Secular One", serif;
 }
-
 h2 {
     color: #FFD029;
     font-size: 1.5rem;
@@ -36,7 +32,6 @@ h2 {
     vertical-align: top;
     font-family: Lora, serif;
 }
-
 .solar-system {
     width: 100%;
     height: 100%;
@@ -45,7 +40,6 @@ h2 {
     display: flex;
     align-items: center;
 }
-
 .sun {
     width: 79.875rem;
     height: 79.875rem;
@@ -54,12 +48,10 @@ h2 {
     position: absolute;
     left: -1200px;
 }
-
     #sun:hover {
         cursor: pointer;
         opacity: 0.8;
     }
-
 .planet-container {
     width: 100%;
     height:auto;
@@ -67,16 +59,13 @@ h2 {
     justify-content: space-between;
     align-items: center;
 }
-
 .planet {
     border-radius: 50%;
 }
-
     .planet:hover {
         cursor: pointer;
         opacity: 0.8;
     }
-
 .planet--tiny {
     width: 0.875rem;
     height: 0.875rem;
@@ -97,23 +86,18 @@ h2 {
     width: 11.75rem;
     height: 11.75rem;
 }
-
 .planet--mercury {
     background: #888888;
 }
-
 .planet--mars {
     background: #EF5F5F;
 }
-
 .planet--earth {
     background: #428ED4;
 }
-
 .planet--venus {
     background: #E7CDCD;
 }
-
 .planet--saturn {
     background: #C7AA72;
     display: flex;
@@ -121,7 +105,6 @@ h2 {
     justify-content: center;
     transform: rotate(330deg);
 }
-
     .planet--saturn::after { /* Saturn's rings */
         content: "";
         min-width: 14rem;
@@ -129,19 +112,15 @@ h2 {
         border-radius: 50%;
         background-color: rgb(255 255 255 / 0.4);
     }
-
 .planet--jupiter {
     background: #E29468;
 }
-
 .planet--uranus {
     background: #C9D4F1;
 }
-
 .planet--neptune {
     background: #7A91A7;
 }
-
 .planet--info {
     box-shadow:
     0 0 0 6rem rgb(255 255 255 / 0.045),
@@ -149,14 +128,12 @@ h2 {
     visibility: hidden;
 }
 
-
 /*OVERLAY PAGE*/
 
 @keyframes slide {
     0% {left: -100%;}
     100% {left: 0;}
 }
-
 .overlay-page {
     position: absolute;
     width: 100%;
@@ -170,7 +147,6 @@ h2 {
     left: 0;
     top: 0;
 }
-
 .overlay-page--hidden {
     left: 100%;
 }
@@ -183,7 +159,6 @@ h2 {
     animation-direction: normal;
     animation-timing-function: ease-out;
 }
-
 .overlay-page__star-canvas {
     width: 70.875rem;
     min-height: 90%;
@@ -194,7 +169,6 @@ h2 {
     z-index: 2;
     opacity: 0.4;
 }
-
 .overlay-page__info-section {
     width: 40rem;
     min-height: 90%;
@@ -204,24 +178,20 @@ h2 {
     margin: auto;
     z-index: 3;
 }
-
 .overlay-page__info-section h1, .overlay-page__info-section h2 {
     text-align: left;
 }
-
 .overlay-page__info-section h3 {
     font-family: "Secular One";
     letter-spacing: 0.1rem;
     color: #fff;
     margin: 0;
 } 
-
 .overlay-page__info-section p  {
     font-family: 'Roboto condensed', sans-serif;
     letter-spacing: 0.18rem;
     color: #fff;
 }
-
 .info-section__p {
     color: #fff;
     font-family: 'Roboto condensed', sans-serif;
@@ -229,14 +199,12 @@ h2 {
     font-size: 1.125rem;
     letter-spacing: 0 !important;
 }
-
 .info-section__grid {
     display: grid;
     width: 100%;
     grid-template-rows: repeat(2, 4.31rem);
     grid-template-columns: repeat(2, 20rem);
 }
-
 .info-section__grid article {
     display: flex;
     flex-flow: column nowrap;
@@ -247,12 +215,9 @@ h2 {
     color: #fff;
     margin: 0;
 }
-
-
 .info-section__moons {
     margin: 0 !important;
 }
-
 .overlay-page__info-section hr {
     width: 100%;
     border: 0.5px solid rgb(255 255 255 / 0.2)

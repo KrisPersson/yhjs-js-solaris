@@ -1,3 +1,7 @@
+// Här ligger alla icke-asynkrona funktioner som ansvarar för hur sidan ändrar och renderar vy,
+// baserat på användarens interaktion.
+
+
 import { planetData } from "./api.js"
 import { overlayPageEl } from "./elements.js"
 
@@ -6,7 +10,6 @@ function toggleOverlay() {
     overlayPageEl.overlayPage.classList.toggle('overlay-page--hidden')
     overlayPageEl.overlayPage.classList.toggle('animate')
     overlayPageEl.bigPlanet.classList.toggle('big-planet--visible')
-
 }
 
 function renderOverlayPage(planetId, name) {
@@ -32,7 +35,7 @@ function spaceOutNum(num) {
         const newArr = []
         let j = 1
         for (let i = arr.length; i > 0 ; i--) {
-            
+
             newArr.unshift(arr[i - 1])
 
             if (j % 3 === 0) {

@@ -1,3 +1,5 @@
+// Allt asynkront och API-relaterat för att hålla det separat, och lättare överskådligt, från allt som händer internt.
+
 const BASE_URL = 'https://fathomless-shelf-54969.herokuapp.com/'
 let planetData
 
