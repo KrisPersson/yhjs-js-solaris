@@ -169,15 +169,12 @@ h2 {
     z-index: 3;
     left: 0;
     top: 0;
-
-    
 }
 
 .overlay-page--hidden {
     left: 100%;
-    
 }
-.big-planet--hidden {
+.big-planet--visible {
     visibility: unset;
 }
 .animate {
@@ -250,7 +247,6 @@ h2 {
     color: #fff;
     margin: 0;
 }
-
 
 
 .info-section__moons {
