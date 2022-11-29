@@ -13,7 +13,6 @@ body {
 
 header {
     position: absolute;
-    /* margin: 0; */
     top: 4rem;
     right: 4rem;
 }
@@ -56,10 +55,10 @@ h2 {
     left: -1200px;
 }
 
-#sun:hover {
-    cursor: pointer;
-    opacity: 0.8;
-}
+    #sun:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 
 .planet-container {
     width: 100%;
@@ -73,14 +72,30 @@ h2 {
     border-radius: 50%;
 }
 
-.planet:hover {
-    cursor: pointer;
-    opacity: 0.8;
-}
+    .planet:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 
 .planet--tiny {
     width: 0.875rem;
     height: 0.875rem;
+}
+.planet--small {
+    width: 1.625rem;
+    height: 1.625rem;
+}
+.planet--medium {
+    width: 4.125rem;
+    height: 4.125rem;
+}
+.planet--big {
+    width: 9rem;
+    height: 9rem;
+}
+.planet--huge {
+    width: 11.75rem;
+    height: 11.75rem;
 }
 
 .planet--mercury {
@@ -91,73 +106,56 @@ h2 {
     background: #EF5F5F;
 }
 
-.planet--small {
-    width: 1.625rem;
-    height: 1.625rem;
-}
-
 .planet--earth {
     background: #428ED4;
-}
-
-.earth--info {
-    box-shadow:
-    0 0 0 7rem rgb(66 142 212 / 0.06),
-    0 0 0 3.5rem rgb(66 142 212 / 0.1);
 }
 
 .planet--venus {
     background: #E7CDCD;
 }
 
-.planet--medium {
-    width: 4.125rem;
-    height: 4.125rem;
-}
-
-.planet--uranus {
-    background: #C9D4F1;
-
-}
-
-.planet--neptune {
-    background: #7A91A7;
-}
-
-.planet--big {
-    width: 9rem;
-    height: 9rem;
-}
-
 .planet--saturn {
     background: #C7AA72;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: rotate(330deg);
 }
 
-.planet--saturn::after {
-    content: "";
-    min-width: 14rem;
-    height: 0.34375rem;
-    border-radius: 50%;
-    background-color: rgb(255 255 255 / 0.8);
-}
-
-.planet--huge {
-    width: 11.75rem;
-    height: 11.75rem;
-}
+    .planet--saturn::after { /* Saturn's rings */
+        content: "";
+        min-width: 14rem;
+        height: 0.34375rem;
+        border-radius: 50%;
+        background-color: rgb(255 255 255 / 0.4);
+    }
 
 .planet--jupiter {
     background: #E29468;
+}
 
+.planet--uranus {
+    background: #C9D4F1;
+}
+
+.planet--neptune {
+    background: #7A91A7;
+}
+
+.planet--info {
+    box-shadow:
+    0 0 0 6rem rgb(255 255 255 / 0.045),
+    0 0 0 3rem rgb(255 255 255 / 0.03);
+    visibility: hidden;
 }
 
 
 /*OVERLAY PAGE*/
+
+@keyframes slide {
+    0% {left: -100%;}
+    100% {left: 0;}
+}
 
 .overlay-page {
     position: absolute;
@@ -171,11 +169,22 @@ h2 {
     z-index: 3;
     left: 0;
     top: 0;
-    /* visibility: hidden; */
+
+    
 }
 
 .overlay-page--hidden {
-    left: 200%;
+    left: 100%;
+    
+}
+.big-planet--hidden {
+    visibility: unset;
+}
+.animate {
+    animation-name: slide;
+    animation-duration: 700ms;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
 }
 
 .overlay-page__star-canvas {
@@ -187,13 +196,9 @@ h2 {
     margin: auto;
     z-index: 2;
     opacity: 0.4;
-
-
-    /* background: red; */
 }
 
 .overlay-page__info-section {
-    /* border: 2px solid yellow;  */
     width: 40rem;
     min-height: 90%;
     position: absolute;
@@ -207,6 +212,19 @@ h2 {
     text-align: left;
 }
 
+.overlay-page__info-section h3 {
+    font-family: "Secular One";
+    letter-spacing: 0.1rem;
+    color: #fff;
+    margin: 0;
+} 
+
+.overlay-page__info-section p  {
+    font-family: 'Roboto condensed', sans-serif;
+    letter-spacing: 0.18rem;
+    color: #fff;
+}
+
 .info-section__p {
     color: #fff;
     font-family: 'Roboto condensed', sans-serif;
@@ -218,7 +236,7 @@ h2 {
 .info-section__grid {
     display: grid;
     width: 100%;
-    grid-template-rows: repeat(2, 5.75rem);
+    grid-template-rows: repeat(2, 4.31rem);
     grid-template-columns: repeat(2, 20rem);
 }
 
@@ -233,23 +251,11 @@ h2 {
     margin: 0;
 }
 
-.overlay-page__info-section h3 {
-    font-family: "Secular One";
-    letter-spacing: 0.1rem;
-    color: #fff;
-} 
 
-.overlay-page__info-section p  {
-    font-family: 'Roboto condensed', sans-serif;
-    letter-spacing: 0.18rem;
-    color: #fff;
-    /* margin: 0; */
-}
 
 .info-section__moons {
     margin: 0 !important;
 }
-
 
 .overlay-page__info-section hr {
     width: 100%;
